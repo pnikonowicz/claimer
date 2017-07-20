@@ -2,9 +2,10 @@ package commands
 
 import (
 	"fmt"
+	"strings"
+
 	clocker "github.com/mdelillo/claimer/locker"
 	"github.com/pkg/errors"
-	"strings"
 )
 
 type ownerCommand struct {

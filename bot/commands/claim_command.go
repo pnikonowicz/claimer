@@ -1,8 +1,9 @@
 package commands
 
 import (
-	"github.com/pkg/errors"
 	"strings"
+
+	"github.com/pkg/errors"
 )
 
 type claimCommand struct {
@@ -24,10 +25,10 @@ func (c *claimCommand) Execute() (string, error) {
 		return "", errors.Wrap(err, "failed to get status of locks")
 	}
 	if !poolExists(pool, locks) {
-		return pool + " does not exist", nil
+		return pool + " i feel nothing", nil
 	}
 	if poolClaimed(pool, locks) {
-		return pool + " is already claimed", nil
+		return pool + " i can feel it is alive", nil
 	}
 
 	var message string
@@ -38,5 +39,5 @@ func (c *claimCommand) Execute() (string, error) {
 		return "", errors.Wrap(err, "failed to claim lock")
 	}
 
-	return "Claimed " + pool, nil
+	return "There can only be one " + pool, nil
 }

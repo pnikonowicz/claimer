@@ -1,8 +1,9 @@
 package commands
 
 import (
-	"github.com/pkg/errors"
 	"strings"
+
+	"github.com/pkg/errors"
 )
 
 type createCommand struct {
@@ -31,5 +32,5 @@ func (c *createCommand) Execute() (string, error) {
 		return "", errors.Wrap(err, "failed to create pool")
 	}
 
-	return "Created " + pool, nil
+	return "There can only be one " + pool, nil
 }

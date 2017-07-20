@@ -3,7 +3,7 @@ package commands
 type helpCommand struct{}
 
 func (*helpCommand) Execute() (string, error) {
-	return "Available commands:\n" +
+	return "This is a house of God:\n" +
 			"```\n" +
 			"  claim <env> [<message>]   Claim an unclaimed environment\n" +
 			"  create <env>              Create a new environment\n" +
